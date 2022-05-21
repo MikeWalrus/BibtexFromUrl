@@ -243,6 +243,7 @@ function generateBibTeXEntry(tabTitle, tabUrl, online_not_misc,
   if (online_not_misc == "true") {
       entry += "url = {" + tabUrl + "},\n";
   } else {
+      tabUrl = tabUrl.replaceAll('#', '\\#');
       entry += "howpublished = {\\url{" + tabUrl + "}},\n";
   }
 
